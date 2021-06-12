@@ -1,6 +1,6 @@
 ﻿using Telegram.Bot;
 
-namespace Bot.Business.Services
+namespace Bot.Business.Abstractions.ServicesAbstractions
 {
     public interface IBotService
     {

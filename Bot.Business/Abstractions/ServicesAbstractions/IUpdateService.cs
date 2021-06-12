@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using Telegram.Bot.Types;
 
-namespace Bot.Business.Services
+namespace Bot.Business.Abstractions.ServicesAbstractions
 {
     public interface IUpdateService
     {
