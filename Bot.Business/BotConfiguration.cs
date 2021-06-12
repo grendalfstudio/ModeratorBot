@@ -1,4 +1,4 @@
-namespace Bot.Api
+namespace Bot.Business
 {
     public class BotConfiguration
     {
