@@ -8,7 +8,7 @@ using MongoDB.Driver;
 
 namespace Bot.Data.Repositories
 {
-    public class MuteRepository
+    public class MuteRepository : IRepository<Mute>
     {
         private readonly IMongoCollection<Mute> _mutes;
 

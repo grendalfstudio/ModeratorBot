@@ -1,5 +1,6 @@
 using Bot.Business.Services;
 using Bot.Business;
+using Bot.Data;
 using Bot.Data.Abstractions;
 using Bot.Data.Models;
 using Microsoft.AspNetCore.Builder;
@@ -32,6 +33,10 @@ namespace Bot.Api
 
             services.AddSingleton<ISettingDatabaseSettings>(sp =>
                 sp.GetRequiredService<IOptions<SettingDatabaseSettings>>().Value);
+            services.AddSingleton<IBotDatabaseSettings>(sp =>
+                sp.GetRequiredService<IOptions<BotDatabaseSettings>>().Value);
+
+            services.AddDataServices();
 
             services
                 .AddControllers()
