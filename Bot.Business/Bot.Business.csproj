@@ -14,4 +14,8 @@
     <ProjectReference Include="..\Bot.Data\Bot.Data.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Implementation\Commands\" />
+  </ItemGroup>
+
 </Project>

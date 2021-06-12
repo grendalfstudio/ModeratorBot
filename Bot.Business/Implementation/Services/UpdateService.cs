@@ -1,11 +1,12 @@
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Bot.Business.Abstractions.ServicesAbstractions;
 using Microsoft.Extensions.Logging;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
 
-namespace Bot.Business.Services
+namespace Bot.Business.Implementation.Services
 {
     public class UpdateService : IUpdateService
     {

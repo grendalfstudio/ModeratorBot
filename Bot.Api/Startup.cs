@@ -1,4 +1,4 @@
-using Bot.Business.Services;
+using Bot.Business.Abstractions.ServicesAbstractions;
 using Bot.Business;
 using Bot.Data.Abstractions;
 using Bot.Data.Models;
@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
+using Bot.Business.Implementation.Services;
 
 namespace Bot.Api
 {
@@ -22,8 +23,7 @@ namespace Bot.Api
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddScoped<IUpdateService, UpdateService>();
-            services.AddSingleton<IBotService, BotService>();
+            services.RegisterBusinessServices();
             services.Configure<BotConfiguration>(Configuration.GetSection("BotConfiguration"));
             services.Configure<BotDatabaseSettings>(
                 Configuration.GetSection(nameof(BotDatabaseSettings)));
