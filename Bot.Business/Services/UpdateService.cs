@@ -5,7 +5,7 @@ using Microsoft.Extensions.Logging;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
 
-namespace Bot.Api.Services
+namespace Bot.Business.Services
 {
     public class UpdateService : IUpdateService
     {

@@ -1,7 +1,7 @@
 using Microsoft.Extensions.Options;
 using Telegram.Bot;
 
-namespace Bot.Api.Services
+namespace Bot.Business.Services
 {
     public class BotService : IBotService
     {
