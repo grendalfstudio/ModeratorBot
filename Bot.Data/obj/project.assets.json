@@ -8,23 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Pawtetka\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Учеба 3.2\\кпи\\ModeratorBot\\Bot.Data\\Bot.Data.csproj",
+      "projectUniqueName": "D:\\KPI\\KPIcourse3(2sem)\\KPI\\Project\\Bot.Data\\Bot.Data.csproj",
       "projectName": "Bot.Data",
-      "projectPath": "D:\\Учеба 3.2\\кпи\\ModeratorBot\\Bot.Data\\Bot.Data.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "D:\\Учеба 3.2\\кпи\\ModeratorBot\\Bot.Data\\obj\\",
+      "projectPath": "D:\\KPI\\KPIcourse3(2sem)\\KPI\\Project\\Bot.Data\\Bot.Data.csproj",
+      "packagesPath": "C:\\Users\\Pawtetka\\.nuget\\packages\\",
+      "outputPath": "D:\\KPI\\KPIcourse3(2sem)\\KPI\\Project\\Bot.Data\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Pawtetka\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -64,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

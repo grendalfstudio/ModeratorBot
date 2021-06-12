@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bot.Data", "Bot.Data\Bot.Data.csproj", "{739423C1-2664-406A-933B-F13F800E8033}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bot.Data", "Bot.Data\Bot.Data.csproj", "{739423C1-2664-406A-933B-F13F800E8033}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bot.Api", "Bot.Api\Bot.Api.csproj", "{B60A0E8C-885C-46DE-B6B7-ED291D52BE26}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bot.Api", "Bot.Api\Bot.Api.csproj", "{B60A0E8C-885C-46DE-B6B7-ED291D52BE26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bot.Business", "Bot.Business\Bot.Business.csproj", "{708A75DF-A099-4707-97F9-01BD1CD2906C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{B60A0E8C-885C-46DE-B6B7-ED291D52BE26}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B60A0E8C-885C-46DE-B6B7-ED291D52BE26}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B60A0E8C-885C-46DE-B6B7-ED291D52BE26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{708A75DF-A099-4707-97F9-01BD1CD2906C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{708A75DF-A099-4707-97F9-01BD1CD2906C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{708A75DF-A099-4707-97F9-01BD1CD2906C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{708A75DF-A099-4707-97F9-01BD1CD2906C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
