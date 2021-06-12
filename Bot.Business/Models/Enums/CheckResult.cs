@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bot.Business.Models
+namespace Bot.Business.Models.Enums
 {
-    public class LinkDto
+    public enum CheckResult
     {
-        public int Id { get; set; }
-        public string Url { get; set; }
+        Ok,
+        NeedBan
     }
 }
