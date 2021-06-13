@@ -8,7 +8,7 @@ namespace Bot.Business.Models
 {
     public class MuteDto
     {
-        public long Id { get; set; }
+        public string Id { get; set; }
         public long UserId { get; set; }
         public long ChatId { get; set; }
         public int MuteDuration { get; set; }

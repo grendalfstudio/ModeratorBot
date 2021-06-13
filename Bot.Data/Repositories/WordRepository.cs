@@ -26,7 +26,7 @@ namespace Bot.Data.Repositories
             return words.ToList();
         }
 
-        public async Task<WordModel> GetById(long id)
+        public async Task<WordModel> GetById(string id)
         {
             var words = await _words.FindAsync(w => w.Id == id);
             return await words.FirstOrDefaultAsync();
@@ -44,7 +44,7 @@ namespace Bot.Data.Repositories
             return model;
         }
 
-        public async Task Update(long id, WordModel model)
+        public async Task Update(string id, WordModel model)
         {
             await _words.ReplaceOneAsync(w => w.Id == id, model);
         }
@@ -54,7 +54,7 @@ namespace Bot.Data.Repositories
             await _words.DeleteOneAsync(w => w.Id == model.Id);
         }
 
-        public async Task DeleteById(long id)
+        public async Task DeleteById(string id)
         {
             await _words.DeleteOneAsync(w => w.Id == id);
         }

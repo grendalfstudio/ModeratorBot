@@ -26,7 +26,7 @@ namespace Bot.Data.Repositories
             return reports.ToList();
         }
 
-        public async Task<Report> GetById(long id)
+        public async Task<Report> GetById(string id)
         {
             var reports = await _reports.FindAsync(m => m.Id == id);
             return await reports.FirstOrDefaultAsync();
@@ -44,7 +44,7 @@ namespace Bot.Data.Repositories
             return model;
         }
 
-        public async Task Update(long id, Report model)
+        public async Task Update(string id, Report model)
         {
             await _reports.ReplaceOneAsync(m => m.Id == id, model);
         }
@@ -54,7 +54,7 @@ namespace Bot.Data.Repositories
             await _reports.DeleteOneAsync(m => m.Id == model.Id);
         }
 
-        public async Task DeleteById(long id)
+        public async Task DeleteById(string id)
         {
             await _reports.DeleteOneAsync(m => m.Id == id);
         }

@@ -8,7 +8,7 @@ namespace Bot.Business.Models
 {
     public class WordDto
     {
-        public long Id { get; set; }
+        public string Id { get; set; }
         public string Word { get; set; }
     }
 }

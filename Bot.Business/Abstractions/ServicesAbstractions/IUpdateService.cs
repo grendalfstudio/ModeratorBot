@@ -5,6 +5,6 @@ namespace Bot.Business.Abstractions.ServicesAbstractions
 {
     public interface IUpdateService
     {
-        Task EchoAsync(Update update);
+        Task HandleUpdateAsync(Update update);
     }
 }

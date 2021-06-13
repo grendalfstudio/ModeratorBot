@@ -21,22 +21,22 @@ namespace Bot.Business.Implementation.Services
             _deleteMessageService = deleteMessageService;
         }
 
-        public void AddNewReport(long reportedMessage)
+        public Task AddNewReport(long reportedMessage)
         {
             throw new NotImplementedException();
         }
 
-        public long CountReports(long userId, long chatId)
+        public Task<long> CountReports(long userId, long chatId)
         {
             throw new NotImplementedException();
         }
 
-        public void DeleteMessage(long messageId)
+        public Task DeleteMessage(long messageId)
         {
             throw new NotImplementedException();
         }
 
-        public void MuteUser(long userId)
+        public Task MuteUser(long userId)
         {
             throw new NotImplementedException();
         }
