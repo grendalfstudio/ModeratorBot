@@ -4,26 +4,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Bot.Data.DbContexts;
 
 namespace Bot.Business.Implementation.Services
 {
     public class MuteService : IMuteService
     {
         private readonly ISettingsService _settingsService;
-        //UnitOfWork here
+        private readonly BotDbContext _botDbContext;
 
-        public MuteService(ISettingsService settingsService)
+        public MuteService(ISettingsService settingsService, BotDbContext botDbContext)
         {
             _settingsService = settingsService;
-            //UnitOfWork here
+            _botDbContext = botDbContext;
         }
 
-        public void AddMute(long muteDuration, long userId, long chatId)
+        public Task AddMute(long muteDuration, long userId, long chatId)
         {
             throw new NotImplementedException();
         }
 
-        public List<long> GetMutedUsers(long chatId)
+        public Task<List<long>> GetMutedUsers(long chatId)
         {
             throw new NotImplementedException();
         }

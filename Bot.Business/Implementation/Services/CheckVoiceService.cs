@@ -18,7 +18,7 @@ namespace Bot.Business.Implementation.Services
             _settingsService = settingsService;
         }
 
-        public async Task<CheckResult> Check(Audio voice, long chatId)
+        public async Task<CheckResult> Check(Voice voice, long chatId)
         {
             return CheckResult.NeedBan;
         }

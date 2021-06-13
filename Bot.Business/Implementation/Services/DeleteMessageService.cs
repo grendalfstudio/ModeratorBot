@@ -4,27 +4,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Bot.Business.Abstractions.ServicesAbstractions;
+using Bot.Data.DbContexts;
 using Telegram.Bot.Types;
 
 namespace Bot.Business.Implementation.Services
 {
     public class DeleteMessageService : IDeleteMessageService
     {
-        //UnitOfWork here
+        private readonly BotDbContext _botDbContext;
         private readonly ISettingsService _settingsService;
 
-        public DeleteMessageService(ISettingsService settingsService)
+        public DeleteMessageService(ISettingsService settingsService, BotDbContext botDbContext)
         {
             _settingsService = settingsService;
-            //UnitOfWork here
+            _botDbContext = botDbContext;
         }
 
-        public void DeleteMessage(long messageId)
+        public async Task DeleteMessage(long messageId)
         {
-            throw new NotImplementedException();
+            //Client delete message on chat
+            await _botDbContext.Messages.DeleteById(messageId);
         }
 
-        public List<Message> GetDeletedMessages(long? userId, long chatId)
+        public Task<List<Message>> GetDeletedMessages(long? userId, long chatId)
         {
             throw new NotImplementedException();
         }

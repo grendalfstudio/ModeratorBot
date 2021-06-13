@@ -10,6 +10,6 @@ namespace Bot.Business.Abstractions.ServicesAbstractions
 {
     public interface ICheckVoiceService
     {
-        Task<CheckResult> Check(Audio voice, long chatId);
+        Task<CheckResult> Check(Voice voice, long chatId);
     }
 }
