@@ -26,7 +26,7 @@ namespace Bot.Data.Repositories
             return messages.ToList();
         }
 
-        public async Task<Message> GetById(int id)
+        public async Task<Message> GetById(long id)
         {
             var messages = await _messages.FindAsync(m => m.Id == id);
             return await messages.FirstOrDefaultAsync();
@@ -44,7 +44,7 @@ namespace Bot.Data.Repositories
             return model;
         }
 
-        public async Task Update(int id, Message model)
+        public async Task Update(long id, Message model)
         {
             await _messages.ReplaceOneAsync(m => m.Id == id, model);
         }
@@ -54,7 +54,7 @@ namespace Bot.Data.Repositories
             await _messages.DeleteOneAsync(m => m.Id == model.Id);
         }
 
-        public async Task DeleteById(int id)
+        public async Task DeleteById(long id)
         {
             await _messages.DeleteOneAsync(m => m.Id == id);
         }

@@ -10,6 +10,6 @@ namespace Bot.Business.Abstractions.ServicesAbstractions
 {
     public interface ICheckMessageService
     {
-        CheckResult CheckMessageContent(Message message);
+        Task<CheckResult> CheckMessageContent(Message message);
     }
 }

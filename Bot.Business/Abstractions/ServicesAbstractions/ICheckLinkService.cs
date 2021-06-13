@@ -9,6 +9,6 @@ namespace Bot.Business.Abstractions.ServicesAbstractions
 {
     public interface ICheckLinkService
     {
-        CheckResult Check(string url, int chatId);
+        Task<CheckResult> Check(string url, long chatId);
     }
 }

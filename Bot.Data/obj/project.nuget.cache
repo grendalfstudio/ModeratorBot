@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "dcWKXaOGoC2RNFfcdS5PDMoAOebo4XmdBrvzsGAWAA4GqMt8uau/u+UnmDIPl9fcVNKiqkHyFjeDCUfmnHn3kw==",
+  "dgSpecHash": "cgqB6kXQOQTnRI7Xfcyskqnc1rEZacre9t/R3Cs5TuMyIMH2pBNmNs/gy2Tyj5ZCzt6GKzx2MG5BTmpOdpIWzg==",
   "success": true,
   "projectFilePath": "D:\\KPI\\KPIcourse3(2sem)\\KPI\\Project\\Bot.Data\\Bot.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Pawtetka\\.nuget\\packages\\dnsclient\\1.4.0\\dnsclient.1.4.0.nupkg.sha512",
+    "C:\\Users\\Pawtetka\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\Pawtetka\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
+    "C:\\Users\\Pawtetka\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
     "C:\\Users\\Pawtetka\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.2\\microsoft.netcore.platforms.2.1.2.nupkg.sha512",
     "C:\\Users\\Pawtetka\\.nuget\\packages\\mongodb.bson\\2.12.4\\mongodb.bson.2.12.4.nupkg.sha512",
     "C:\\Users\\Pawtetka\\.nuget\\packages\\mongodb.driver\\2.12.4\\mongodb.driver.2.12.4.nupkg.sha512",

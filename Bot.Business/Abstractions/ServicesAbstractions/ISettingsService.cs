@@ -9,10 +9,11 @@ namespace Bot.Business.Abstractions.ServicesAbstractions
 {
     public interface ISettingsService
     {
-        void AddRestrictedWords(List<string> words);
-        void AddExcludedWords(List<string> words);
-        void SetMuteTime(int time);
-        void SetMaxReportCount(int count);
-        SettingsDto GetSettings(int chatId);
+        Task AddRestrictedWords(List<string> words, long chatId);
+        Task AddExcludedWords(List<string> words, long chatId);
+        Task AddRestrictedLinks(List<string> links, long chatId);
+        Task SetMuteTime(int time, long chatId);
+        Task SetMaxReportCount(short count, long chatId);
+        Task<SettingsDto> GetSettings(long chatId);
     }
 }

@@ -8,12 +8,12 @@ namespace Bot.Data.Models
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public int Id { get; set; }
-        public int ChatId { get; set; }
-        public IList<int> RestrictedWords { get; set; }
-        public IList<int> ExcludedWords { get; set; }
-        public IList<int> RestrictedLinks { get; set; }
+        public long Id { get; set; }
+        public long ChatId { get; set; }
+        public IList<long> RestrictedWords { get; set; }
+        public IList<long> ExcludedWords { get; set; }
+        public IList<long> RestrictedLinks { get; set; }
         public int MuteTime { get; set; }
-        public int MaxReportCount { get; set; }
+        public short MaxReportCount { get; set; }
     }
 }

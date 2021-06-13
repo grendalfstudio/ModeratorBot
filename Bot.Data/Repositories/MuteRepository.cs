@@ -26,7 +26,7 @@ namespace Bot.Data.Repositories
             return mutes.ToList();
         }
 
-        public async Task<Mute> GetById(int id)
+        public async Task<Mute> GetById(long id)
         {
             var mutes = await _mutes.FindAsync(m => m.Id == id);
             return await mutes.FirstOrDefaultAsync();
@@ -44,7 +44,7 @@ namespace Bot.Data.Repositories
             return model;
         }
 
-        public async Task Update(int id, Mute model)
+        public async Task Update(long id, Mute model)
         {
             await _mutes.ReplaceOneAsync(m => m.Id == id, model);
         }
@@ -54,7 +54,7 @@ namespace Bot.Data.Repositories
             await _mutes.DeleteOneAsync(m => m.Id == model.Id);
         }
 
-        public async Task DeleteById(int id)
+        public async Task DeleteById(long id)
         {
             await _mutes.DeleteOneAsync(m => m.Id == id);
         }

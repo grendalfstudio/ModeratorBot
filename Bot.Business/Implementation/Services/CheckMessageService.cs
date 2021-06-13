@@ -25,9 +25,14 @@ namespace Bot.Business.Implementation.Services
             _checkImageService = checkImageService;
         }
 
-        public CheckResult CheckMessageContent(Message message)
+        public Task<CheckResult> CheckMessageContent(Message message)
         {
-            throw new NotImplementedException();
+            switch (message.Type)
+            {
+                case Telegram.Bot.Types.Enums.MessageType.Text:
+                    _checkTextService.Check(message.Text, message.Chat.Id);
+                    break;
+            }
         }
     }
 }

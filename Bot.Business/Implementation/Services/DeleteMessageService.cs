@@ -19,12 +19,12 @@ namespace Bot.Business.Implementation.Services
             //UnitOfWork here
         }
 
-        public void DeleteMessage(int messageId)
+        public void DeleteMessage(long messageId)
         {
             throw new NotImplementedException();
         }
 
-        public List<Message> GetDeletedMessages(int? userId, int chatId)
+        public List<Message> GetDeletedMessages(long? userId, long chatId)
         {
             throw new NotImplementedException();
         }

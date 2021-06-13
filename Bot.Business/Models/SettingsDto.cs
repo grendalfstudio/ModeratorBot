@@ -8,12 +8,12 @@ namespace Bot.Business.Models
 {
     public class SettingsDto
     {
-        public int Id { get; set; }
-        public int ChatId { get; set; }
-        public List<int> RestrictedWords { get; set; }
-        public List<int> ExcludedWords { get; set; }
-        public List<int> RestrictedLinks { get; set; }
+        public long Id { get; set; }
+        public long ChatId { get; set; }
+        public List<long> RestrictedWords { get; set; }
+        public List<long> ExcludedWords { get; set; }
+        public List<long> RestrictedLinks { get; set; }
         public int MuteTime { get; set; }
-        public int MaxReportCount { get; set; }
+        public short MaxReportCount { get; set; }
     }
 }

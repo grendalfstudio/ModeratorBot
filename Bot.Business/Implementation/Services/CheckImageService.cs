@@ -18,7 +18,7 @@ namespace Bot.Business.Implementation.Services
             _settingsService = settingsService;
         }
 
-        public CheckResult Check(PhotoSize photo, int chatId)
+        public Task<CheckResult> Check(PhotoSize photo, long chatId)
         {
             throw new NotImplementedException();
         }

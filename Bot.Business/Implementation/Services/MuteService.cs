@@ -18,12 +18,12 @@ namespace Bot.Business.Implementation.Services
             //UnitOfWork here
         }
 
-        public void AddMute(int muteDuration, int userId, int chatId)
+        public void AddMute(long muteDuration, long userId, long chatId)
         {
             throw new NotImplementedException();
         }
 
-        public List<int> GetMutedUsers(int chatId)
+        public List<long> GetMutedUsers(long chatId)
         {
             throw new NotImplementedException();
         }

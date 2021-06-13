@@ -8,9 +8,9 @@ namespace Bot.Business.Abstractions.ServicesAbstractions
 {
     public interface IReportService
     {
-        int CountReports(int userId, int chatId);
-        void AddNewReport(int reportedMessage);
-        void MuteUser(int userId);
-        void DeleteMessage(int messageId);
+        long CountReports(long userId, long chatId);
+        void AddNewReport(long reportedMessage);
+        void MuteUser(long userId);
+        void DeleteMessage(long messageId);
     }
 }

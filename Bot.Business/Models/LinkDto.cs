@@ -8,7 +8,7 @@ namespace Bot.Business.Models
 {
     public class LinkDto
     {
-        public int Id { get; set; }
+        public long Id { get; set; }
         public string Url { get; set; }
     }
 }

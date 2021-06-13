@@ -10,6 +10,6 @@ namespace Bot.Business.Abstractions.ServicesAbstractions
 {
     public interface ICheckImageService
     {
-        CheckResult Check(PhotoSize photo, int chatId);
+        Task<CheckResult> Check(PhotoSize photo, long chatId);
     }
 }

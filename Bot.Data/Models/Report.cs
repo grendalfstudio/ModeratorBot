@@ -7,11 +7,11 @@ namespace Bot.Data.Models
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public int Id { get; set; }
-        public int SourceUserId { get; set; }
-        public int TargetUserId { get; set; }
-        public int WarningMessage { get; set; }
-        public int ReportedMessage { get; set; }
+        public long Id { get; set; }
+        public long SourceUserId { get; set; }
+        public long TargetUserId { get; set; }
+        public long WarningMessage { get; set; }
+        public long ReportedMessage { get; set; }
 
     }
 }
