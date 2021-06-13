@@ -13,15 +13,10 @@ namespace Bot.Business.Implementation.Services
         private List<Timer> timers = new List<Timer>();
         private SchedulerService() { }
         public static SchedulerService Instance => _instance ?? (_instance = new SchedulerService());
-        public void ScheduleTask(int hour, int min, double intervalInHour, Action task)
+
+        public void ScheduleTask(long duration, Action task)
         {
-            DateTime now = DateTime.Now;
-            DateTime firstRun = new DateTime(now.Year, now.Month, now.Day, hour, min, 0, 0);
-            if (now > firstRun)
-            {
-                firstRun = firstRun.AddDays(1);
-            }
-            TimeSpan timeToGo = firstRun - now;
+            TimeSpan timeToGo = TimeSpan.FromSeconds(duration);
             if (timeToGo <= TimeSpan.Zero)
             {
                 timeToGo = TimeSpan.Zero;
@@ -29,7 +24,7 @@ namespace Bot.Business.Implementation.Services
             var timer = new Timer(x =>
             {
                 task.Invoke();
-            }, null, timeToGo, TimeSpan.FromHours(intervalInHour));
+            }, null, timeToGo, Timeout.InfiniteTimeSpan);
             timers.Add(timer);
         }
     }

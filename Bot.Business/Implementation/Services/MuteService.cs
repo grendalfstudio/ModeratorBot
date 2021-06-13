@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Bot.Data.DbContexts;
+using Telegram.Bot.Types;
 
 namespace Bot.Business.Implementation.Services
 {
@@ -12,16 +13,25 @@ namespace Bot.Business.Implementation.Services
     {
         private readonly ISettingsService _settingsService;
         private readonly BotDbContext _botDbContext;
+        private readonly BotService _botService;
 
-        public MuteService(ISettingsService settingsService, BotDbContext botDbContext)
+        public MuteService(ISettingsService settingsService, BotDbContext botDbContext, BotService botService)
         {
             _settingsService = settingsService;
             _botDbContext = botDbContext;
+            _botService = botService;
         }
 
-        public Task AddMute(long muteDuration, long userId, long chatId)
+        public async Task AddMute(long muteDuration, long userId, long chatId)
         {
-            throw new NotImplementedException();
+            var permissions = new ChatPermissions
+            {
+                CanSendMediaMessages = false,
+                CanSendMessages = false,
+                CanSendOtherMessages = false,
+                CanSendPolls = false
+            };
+            var result = await _botService.Client.RestrictChatMemberAsync(chatId, userId, permissions, DateTime.Now.AddSeconds(muteDuration));
         }
 
         public Task<List<long>> GetMutedUsers(long chatId)
