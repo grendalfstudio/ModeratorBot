@@ -22,7 +22,7 @@ namespace Bot.Business.Implementation.Services
             _botService = botService;
         }
 
-        public async Task AddMute(long muteDuration, long userId, long chatId)
+        public async Task AddMute(long muteDuration, int userId, long chatId)
         {
             var permissions = new ChatPermissions
             {
