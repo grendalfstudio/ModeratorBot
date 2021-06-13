@@ -9,7 +9,7 @@ namespace Bot.Business.Models
     public class MessageDto
     {
         public string Id { get; set; }
-        public long UserId { get; set; }
+        public int UserId { get; set; }
         public long ChatId { get; set; }
         public long Date { get; set; }
         public string Text { get; set; }

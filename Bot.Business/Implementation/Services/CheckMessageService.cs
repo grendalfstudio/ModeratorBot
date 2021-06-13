@@ -37,7 +37,7 @@ namespace Bot.Business.Implementation.Services
                     result = await _checkVoiceService.Check(message.Voice, message.Chat.Id);
                     break;
                 case Telegram.Bot.Types.Enums.MessageType.Photo:
-                    result = await _checkImageService.Check(message.Photo.LastOrDefault(), message.Chat.Id);
+                    result = await CheckImageMessage(message);
                     break;
                 default:
                     break;
@@ -59,6 +59,21 @@ namespace Bot.Business.Implementation.Services
                 return result;
             }
             result = await _checkTextService.Check(message.Text, message.Chat.Id);
+            return result;
+        }
+
+        private async Task<CheckResult> CheckImageMessage(Message message)
+        {
+            var result = CheckResult.Ok;
+            result = await _checkImageService.Check(message.Photo.LastOrDefault(), message.Chat.Id);
+            if (result == CheckResult.NeedBan)
+            {
+                return result;
+            }
+            if (message.Caption is not null)
+            {
+                result = await CheckTextMessage(message);
+            }
             return result;
         }
     }

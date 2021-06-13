@@ -8,7 +8,7 @@ namespace Bot.Business.Abstractions.ServicesAbstractions
 {
     public interface IMuteService
     {
-        Task AddMute(long muteDuration, long userId, long chatId);
-        Task<List<long>> GetMutedUsers(long chatId);
+        Task AddMute(int userId, long chatId);
+        Task<List<int>> GetMutedUsers(long chatId);
     }
 }

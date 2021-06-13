@@ -26,7 +26,7 @@ namespace Bot.Business.Implementation.Services
             throw new NotImplementedException();
         }
 
-        public Task<long> CountReports(long userId, long chatId)
+        public Task<long> CountReports(int userId, long chatId)
         {
             throw new NotImplementedException();
         }
@@ -36,7 +36,7 @@ namespace Bot.Business.Implementation.Services
             throw new NotImplementedException();
         }
 
-        public Task MuteUser(long userId)
+        public Task MuteUser(int userId)
         {
             throw new NotImplementedException();
         }
