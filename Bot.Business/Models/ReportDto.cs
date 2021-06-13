@@ -8,7 +8,7 @@ namespace Bot.Business.Models
 {
     public class ReportDto
     {
-        public long Id { get; set; }
+        public string Id { get; set; }
         public long SourceUserId { get; set; }
         public long TargetUserId { get; set; }
         public long WarningMessage { get; set; }

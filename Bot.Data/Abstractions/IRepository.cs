@@ -9,16 +9,16 @@ namespace Bot.Data.Abstractions
     {
         public Task<IList<TModel>> GetAll();
 
-        public Task<TModel> GetById(long id);
+        public Task<TModel> GetById(string id);
 
         public Task<IList<TModel>> GetFiltered(Expression<Func<TModel, bool>> filter);
 
         public Task<TModel> Create(TModel model);
 
-        public Task Update(long id, TModel model);
+        public Task Update(string id, TModel model);
 
         public Task Delete(TModel model);
 
-        public Task DeleteById(long id);
+        public Task DeleteById(string id);
     }
 }

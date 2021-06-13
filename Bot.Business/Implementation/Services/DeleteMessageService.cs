@@ -23,7 +23,7 @@ namespace Bot.Business.Implementation.Services
         public async Task DeleteMessage(long messageId)
         {
             //Client delete message on chat
-            //await _botDbContext.Messages.Create(messageId);
+            await _botDbContext.Messages.DeleteById(messageId.ToString());
         }
 
         public Task<List<Message>> GetDeletedMessages(long? userId, long chatId)

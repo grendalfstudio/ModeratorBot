@@ -7,7 +7,7 @@ namespace Bot.Data.Models
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public long Id { get; set; }
+        public string Id { get; set; }
         public long UserId { get; set; }
         public long ChatId { get; set; }
         public long Date { get; set; }
